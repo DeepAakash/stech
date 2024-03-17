@@ -1,0 +1,51 @@
+.home-parent{
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size: 300% 300%;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    animation: gradient 10s linear infinite;
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+
+    }
+    50%{
+        background-position: 100% 50%;
+        
+    }
+    100%{
+        background-position: 0% 50%;
+        
+    }
+}
+
+.custom-shape-divider-bottom-1710632268 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1710632268 svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1710632268 .shape-fill {
+    fill: #FFFFFF;
+}
