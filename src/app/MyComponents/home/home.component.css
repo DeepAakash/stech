@@ -49,3 +49,15 @@
 .custom-shape-divider-bottom-1710632268 .shape-fill {
     fill: #FFFFFF;
 }
+
+@media screen and (max-width: 900px) {
+    .custom-shape-divider-bottom-1710632268 svg{
+        width: 200%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .custom-shape-divider-bottom-1710632268 svg{
+        width: 250%;
+    }
+}

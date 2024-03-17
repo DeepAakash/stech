@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header"  [class.scrolled]="isNavbarScrolled"  #header>
   <nav class="nav container">
     <div class="nav__data">
       <a routerLink="/" class="nav__logo">
@@ -72,7 +72,7 @@
 
               <div class="dropdown__group">
                 <div class="dropdown__icon">
-                  <i class="ri-book-mark-line"></i>
+                  <i class="ri-briefcase-2-line"></i>
                 </div>
                 <span class="dropdown__title">Careers</span>
                 <ul class="dropdown__list">
