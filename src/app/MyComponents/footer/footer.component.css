@@ -5,6 +5,7 @@
   padding: 30px 30px 20px 30px;
   color: var(--body-color);
   background-color: #262A37;
+  width: 100%;
 }
 
 .footer__logo {

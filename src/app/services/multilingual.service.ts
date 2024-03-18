@@ -1,3 +1,5 @@
+// multilingual.service.ts
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -10,20 +12,20 @@ export class MultilingualService {
 
   constructor(private http: HttpClient) {}
 
-  getUserDetails(token: string): Observable<any> {
-    const url = `${this.baseUrl}/${token}/CAF2481BFE584C38FB29114F5DEF5`;
-    return this.http.get<any>(url);
+  getUserDetails(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/CAF2481BFE584C38FB29114F5DEF5`);
   }
 
-  getMultilingualData(
-    token: string,
-    sessionId: string,
-    countryCode: string,
-    pageId: string,
-    langCode: string,
-    sectionId: string
-  ): Observable<any> {
-    const url = `${this.baseUrl}/${token}/7ADC224AC32E8`;
+  getHeaderData(countryCode: string, langCode: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/getMenuMaster`, {
+      params: {
+        country_code: countryCode,
+        lng_code: langCode
+      }
+    });
+  }
+
+  getPageData(sessionId: string, countryCode: string, pageId: string, langCode: string, sectionId: string): Observable<any> {
     const params = {
       session_id: sessionId,
       country_code: countryCode,
@@ -31,6 +33,15 @@ export class MultilingualService {
       lng_code: langCode,
       section_id: sectionId,
     };
-    return this.http.get<any>(url, { params });
+    return this.http.get(`${this.baseUrl}/7ADC224AC32E8`, { params });
+  }
+  
+  getFooterData(countryCode: string, langCode: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/getFooterData`, {
+      params: {
+        country_code: countryCode,
+        lng_code: langCode
+      }
+    });
   }
 }
